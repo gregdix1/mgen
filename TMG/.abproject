@@ -1,0 +1,45 @@
+{
+  "ProjectName": "TMG",
+  "ProjectGuid": "6da33df1-2441-497d-9147-df45ad051c55",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.TMG",
+  "DisplayName": "TMG",
+  "Author": "",
+  "Description": "TMG",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "6.4.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{288bd791-98d7-4320-9dc0-0d86d0be8ca4}",
+  "WP8ProductID": "{a1d900d1-7fd5-451f-900a-60cfff049f36}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.TMG",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
