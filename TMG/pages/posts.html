@@ -1,0 +1,47 @@
+<div class="pages">
+  <div data-page="projects" class="page no-toolbar no-navbar">
+    <div class="page-content">
+    
+     <div class="navbarpages">
+       <div class="navbar_home_link"><a href="index.html"><img src="images/icons/white/home.png" alt="" title="" /></a></div>
+       <div class="navbar_page_center">Blank</div>
+       <div class="menu_open_icon_white"><a href="#" class="open-panel"><img src="images/menu_open.png" alt="" title="" /></a></div>
+     </div>
+     <div id="pages_maincontent" style="overflow: auto; width: 100%; padding: 0px;">
+     <div class="page_single">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+  jQuery(document).ready(function($) {
+    $.get( "http://themillennialgen.com/wp-json/wp/v2/posts", function( data ) {
+        $.each( data, function( i, val ) {
+            $( "#app" ).append(
+                '<li class="group-item list-item">' + 
+                    '<h4>' +
+                    val.title.rendered + 
+                    '</h4>' +
+                    '<p>' +
+                    val.excerpt.rendered +
+                    '</p>' +
+					'<a href="' + 
+					val.link + 
+					'"><img src="../img/arrow.svg" width="10%" height="auto" class="arrowUp" ></a>' +
+					'<div class="addthis_inline_share_toolbox"></div>' +
+                '</li>'
+            );
+        });
+    });
+  });
+  </script>        
+<div id="app"></div>  
+             </div> <!--end of page single-->  
+              
+              
+            
+              
+      
+      </div>
+      
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+</head>
+<body>
+
+ 
+
+ 
+  <style type="text/css">
+  
+
+.list-item {
+   // padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+.group-item {
+    position: relative;
+    display: block;
+    padding: 0px;
+    margin-bottom: -1px;
+       color: #949292;
+    border-bottom: 1px dotted #3c3c3c;
+}
+.arrowUp{
+width: 15px;
+    position: absolute;
+    right: 15px;
+    bottom: 5px;	}
+  </style>
+<div class="pages">
+  <div data-page="projects" class="page no-toolbar no-navbar">
+    <div class="page-content">
+<div class="pages" style="background: #fff;">
+   <span>Blank...</span>  
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script>
+  jQuery(document).load(function($) { alert('ccc');
+    $.get( "http://themillennialgen.com/wp-json/wp/v2/posts", function( data ) {
+        $.each( data, function( i, val ) {
+            $( "#app" ).append(
+                '<li class="group-item list-item">' + 
+                    '<h4>' +
+                    val.title.rendered + 
+                    '</h4>' +
+                    '<p>' +
+                    val.excerpt.rendered +
+                    '</p>' +
+					'<a href="' + 
+					val.link + 
+					'"><img src="../img/arrow.svg" width="10%" height="auto" class="arrowUp" ></a>' +
+					'<div class="addthis_inline_share_toolbox"></div>' +
+                '</li>'
+            );
+        });
+    });
+  });
+  </script>
+    <ul id="app" style="margin: 0px; padding: 0px; font-family: sans-serif; font-size: 10pt;"></ul>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
