@@ -355,7 +355,7 @@ height: 60px;
 height: 100px;
 }
 .navbarpages{
-background-color:#313131;
+background-color:#262626;
 position: fixed;
 top:0px;
 width:100%;
@@ -1139,7 +1139,7 @@ max-width:40%;
 width:20%;
 }
 #pages_maincontent{
-width:90%;
+width:99%;
 padding:20px 5% 20px 5%;
 margin:0px;
 position: absolute; 

@@ -28,6 +28,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/extras.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/common.min.css">
+<link rel="stylesheet" href="css/circle-menu.min.css">       
 <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
 <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'>
 <style  type="text/css">
@@ -37,21 +39,23 @@
 }
 
 .list-nav2 ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
+ color: rgb(245, 242, 242);
+    font-size: 8px;
     font-weight: 300;
-    width: 22%;
+    width: 9%;
     display: inline-block;
     float: left;
     height: auto;
     list-style: none;
-    padding: 13.5% 0px 3%;
-    margin: 2% 0px 2% 8%;
+    padding: 15px 20px 5px 20px;
+    margin: 15px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgb(255, 255, 255);
+    border-color: rgba(152, 148, 148, 0.3);
+    background-color: rgba(25, 24, 24, 0);
     border-image: initial;
-    border-radius: 200px;
+    border-radius: 3px 3px 5px 5px;
+    border-bottom: 8px solid #444343;
 }
 .list-nav2 ul {
     width: 100%;
@@ -60,19 +64,185 @@
     text-align: center;
     list-style: none;
     padding: 0px;
-    margin: 0px;
+    margin: 6%;
 }
 .about-icon a {
     background: url(images/icons/white/user.png) 50% 35px / auto 40% no-repeat;
     background-repeat: no-repeat;
     background-position: 50% 35px;
 }
-
+.maskBox {
+        width: 100%;
+    height: 100%;
+    background: rgba(34, 34, 34, 0.46);
+    position: absolute;
+    top: 0px;
+    z-index: 50;
+    color: #fff;
+    background-image: url(images/blurred-bg8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.spinnerBlue {
+    background-image: url(images/blueglow.gif);
+    background-size: contain;
+    background-position: center;
+    width: 348px;
+    height: 200px;
+    padding-top: 50px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.portal {
+    position: absolute;
+    float: right;
+	display:none;
+    z-index: 50;
+    border: 1px solid #000;
+    border-radius: 100px;
+    color: #fff;
+    height: 160px;
+    width: 160px;
+    padding: 10px;
+    top: 130px;
+    left: 30%;
+}
 
 </style>
+   
 </head>
 <body id="mobile_wrap">
 
+ <!-- circ menu -->
+<nav id="circMen" class="c-circle-menu js-menu" style=" z-index:5999; bottom:2px;">
+
+  <button id="btnc" class="c-circle-menu__toggle js-menu-toggle" style="background-image: url(images/icon-nav3.png); background-size: contain; border: 0px solid #1d1d1d;">
+    <span style="display: none;">Toggle</span>
+  </button>
+  <ul class="c-circle-menu__items">
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="images/hot-wh.svg" alt="" onClick="setHotlist()">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="images/playvid-wh.svg" alt="" onClick="setFrmVideo()">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="images/music-wh.svg" alt="" onClick="setMusic()">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="images/search2-wh.svg" alt="" onClick="setSearch()">
+      </a>
+    </li>
+    <li class="c-circle-menu__item">
+      <a href="#" class="c-circle-menu__link">
+        <img src="images/people-wh.svg" alt="" onClick="setPeople()">
+      </a>
+    </li>
+  </ul>
+  <div id="msk" class="c-circle-menu__mask js-menu-mask">
+ <!--<iframe width="100%" height="300px" style=" margin-top: 5px;" src="https://www.youtube.com/embed/nxnneCWlpT0" frameborder="0" allowfullscreen></iframe>-->
+  <header class="demo-header" style="position: relative; z-index: 80;">
+ 
+    <a href="#" class="demo-header-nav__link" style="font-size: 22pt; position: absolute; right: 15px; top: 5px; border-radius: 0px 0px 10px 10px;" onClick="setBck()"> <i class="fa fa-close"></i><span class="js-menu-toggle" style="display: none;">Toggle</span></a>
+ 
+</header>
+      
+  <div id="topbarpic" class="" style="height:90%; ">
+    <div style="background-color: #1eb991; border-radius: 80px; width: 40px; margin: 10px; height: 40px; text-align: center;">
+     <img id="headIcon" style="max-width: 30px;  margin-top: 5px;" src="images/search2-wh.svg" alt="" data-pin-nopin="true">
+    </div>
+    <div id="listBox" class="maskBox">[ content ]</div>
+  </div>
+  
+ </div>
+</nav>
+<script src="js/circleMenu.min.js"></script>
+<script>
+  var el = '.js-menu';
+  var myMenu = cssCircleMenu(el);
+  
+  function logoClick(){
+		document.getElementById("form1").className = 'container show';
+		document.getElementById("iconHome").className = 'hide';
+};
+
+function setBck(){
+	document.getElementById("msk").className = 'c-circle-menu__mask js-menu-mask';
+		document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+		document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    
+};
+
+function soundCloudSetMain(){
+	document.getElementById("form1").className = 'container show';
+		document.getElementById("iconHome").className = 'hide';
+	document.getElementById("mainFrm").src = 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&amp;color=0066c';	
+};
+
+function setFrmVideo(){
+	//document.getElementById("form1").className = 'container show';
+		//document.getElementById("iconHome").className = 'hide';
+		document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+	//document.getElementById("mainFrm").src = 'https://www.youtube.com/embed/nxnneCWlpT0';
+	document.getElementById("headIcon").src = 'images/playvid-wh.svg';	
+	//<iframe width="560" height="315" src="https://www.youtube.com/embed/nxnneCWlpT0?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+	//'player/signal-loop-silverstonesol.mp4';
+	document.getElementById("listBox").innerHTML = '[ Video ]';
+};
+
+function setPeople(){
+	document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+	document.getElementById("headIcon").src = 'images/people-wh.svg';
+	document.getElementById("headIcon").src = 'images/search2-wh.svg';
+	document.getElementById("headIcon").src = 'images/music-wh.svg';
+	document.getElementById("headIcon").src = 'images/playvid-wh.svg';
+	document.getElementById("headIcon").src = 'images/hot-wh.svg';
+	document.getElementById("listBox").innerHTML = '[ People ]';
+};
+
+//function setPeople(){
+//	document.getElementById("circMen").className = 'c-circle-menu js-menu';
+//	document.getElementById("headIcon").src = 'images/people-wh.svg';
+//};
+
+function setMusic(){
+	document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+	document.getElementById("headIcon").src = 'images/music-wh.svg';
+	document.getElementById("listBox").innerHTML = '[ Music ]';
+
+};
+
+function setSearch(){
+	document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+	document.getElementById("headIcon").src = 'images/search2-wh.svg';
+	document.getElementById("listBox").innerHTML = '<iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/tmg-wp-app/filter/get-posts-filteri.html" frameborder="0" scroll="auto" allowfullscreen></iframe>';
+
+};
+
+function setHotlist(){
+	document.getElementById("circMen").className = 'c-circle-menu js-menu';
+    document.getElementById("btnc").className = 'c-circle-menu__toggle js-menu-toggle';
+	document.getElementById("headIcon").src = 'images/hot-wh.svg';
+	document.getElementById("listBox").innerHTML = '[ Hotlist ]';
+};
+
+
+  </script>
+<!-- end circ menu -->   
+    
+    
     <div class="statusbar-overlay"></div>
 
     <div class="panel-overlay"></div>
@@ -88,6 +258,8 @@
                   <li class="blog-icon"><a href="pages/blog.html" class="close-panel">Blog</a></li>
                   <li class="contact-icon"><a href="pages/contact.html" class="close-panel">Contact</a></li>
                   <li class="contact-icon"><a href="pages/iframe.html" class="close-panel">Frame</a></li>
+                  <li class="contact-icon"><a href="pages/getdata.html" class="close-panel" onclick="delayGetData()">Get Data</a></li>
+                  <li class="contact-icon"><a href="pages/getdata-nohead.html" class="close-panel" >Get Ext Html</a></li>
                 </ul>
               </nav>  
     </div>
@@ -130,9 +302,15 @@
                   <div class="swiper-container swiper-init" data-effect="coverflow" data-pagination=".swiper-pagination">
                     <div class="swiper-wrapper">
                     
-                      <div class="swiper-slide">
-                          <span><img src="images/m-icon.png" width="100" height="auto" alt="" title="" /></span>
-                          <div class="container" style="    margin-top: 0px;">
+                      <div class="swiper-slide"><div id="portal" class="portal">HELLO!</div>
+                      <div style="height:40px"></div>
+                      <div id="iconM" class="spinnerBlue"><a href="#" data-popup=".popup-playlist" class="open-popup">
+                      <img src="images/icon-big-tmg.png" style=" width: 195px; height: auto;"></a>
+</div>
+                      
+                       
+                         <!--<span><img src="images/blueglow.gif" width="100%" height="auto" alt="" title="" /></span>-->
+                          <div class="container" style="margin-bottom: 5px;">
                              <!-- Tagline and Social -->
                             <p class="leader-text">fasion  |  lifestyle  |  arts</p>
                             <div class="social">
@@ -148,15 +326,15 @@
                       <div class="swiper-slide">
                       <nav class="list-nav2">
                             <ul>
-                              <li class="about-icon"><a href="pages/about.html" class="">About</a></li>
-                              <li class="responsive-icon"><a href="#" data-panel="left" class="open-panel">Sidebar</a></li>
-                              <li class="features-icon"><a href="pages/features.html">Features</a></li>
-                              <li class="photos-icon"><a href="pages/photos.html">Gallery</a></li>
-                              <li class="video-icon"><a href="pages/videos.html">Videos</a></li>
-                              <li class="blog-icon"><a href="pages/blog.html">Blog</a></li>
-                              <li class="toogle-icon"><a href="pages/toogle.html">Toogle</a></li>
-                              <li class="docs-icon"><a href="pages/tabs.html">Tabs</a></li>
-                              <li class="contact-icon"><a href="pages/contact.html">Contact</a></li>
+                              <li class="aboutx-icon"><a href="pages/about.html" class=""><i class="fa fa-user" style="font-size: 22pt;"></i>About</a></li>
+                              <li class="responsive-icon"><a href="#" data-panel="left" class="open-panel"><i class="fa fa-image" style="font-size: 22pt;"></i>Sidebar</a></li>
+                              <li class="features-icon"><a href="pages/features.html" class=""><i class="fa fa-camera" style="font-size: 22pt;"></i>Features</a></li>
+                              <li class="photos-icon"><a href="pages/photos.html" class=""><i class="fa fa-youtube" style="font-size: 22pt;"></i>Gallery</a></li>
+                              <li class="video-icon"><a href="pages/videos.html"><i class="fa fa-soundcloud" style="font-size: 22pt;"></i>Videos</a></li>
+                              <li class="blog-icon"><a href="pages/blog.html"><i class="fa fa-twitter" style="font-size: 22pt;"></i>Blog</a></li>
+                              <li class="toogle-icon"><a href="pages/toogle.html"><i class="fa fa-upload" style="font-size: 22pt;"></i>Toogle</a></li>
+                              <li class="docs-icon"><a href="pages/tabs.html"><i class="fa fa-share" style="font-size: 22pt;"></i>Tabs</a></li>
+                              <li class="contact-icon"><a href="pages/contact.html"><i class="fa fa-user" style="font-size: 22pt;"></i>Contact</a></li>
                             </ul>
                           </nav>
                          <!-- <span>WITH <br />BEAUTIFUL</span>
@@ -225,7 +403,7 @@
     <div class="popup popup-cliffcentral">
     <div class="content-block" style="margin: 0px; padding: 0px; height: 100%;">
       
-      <iframe src="http://test.stickyginger.co.za/tmg-wp-app/filter/post-filter-mix.php" scrolling="auto" width="100%" height="98%" frameborder="0"></iframe>
+      <iframe src="http://test.stickyginger.co.za/tmg/ss.html" scrolling="auto" width="100%" height="98%" frameborder="0"></iframe>
       <div class="close_popup_button"><a href="#" class="close-popup">Close</a></div>
     </div>
     </div>
@@ -237,6 +415,7 @@
 <script type="text/javascript" src="js/jquery.swipebox.mod.js"></script>
 <script type="text/javascript" src="js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
+<script type="text/javascript" src="js/getdata.js"></script>
 
 <script>
 //initialise vars
@@ -267,6 +446,14 @@ screenState = "notfull";}
    
 }
 </script>
+    
+    <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(StatusBar);
+    StatusBar.hide();
+}
+    </script>
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

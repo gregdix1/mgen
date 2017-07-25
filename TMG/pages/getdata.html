@@ -1,0 +1,97 @@
+<div class="pages">
+  <div data-page="projects" class="page no-toolbar no-navbar">
+    <div class="page-content">
+    
+    <div class="navbarpages">
+       <div class="navbar_home_link"><a href="index.html"><img src="images/icons/white/home.png" alt="" title="" /></a></div>
+       <div class="navbar_page_center">Get Data</div>
+       <div class="menu_open_icon_white"><a href="#" class="open-panel"><img src="images/menu_open.png" alt="" title="" /></a></div>
+     </div>
+     <div id="pages_maincontent">
+      
+          <h2 class="page_subtitle">DB Data Page</h2>
+          
+             <!-- <div id="pgContent" class="page_single">-->
+      <style type="text/css">
+
+       .w3-table-all {
+           border: 1px solid #ccc;
+           color: -internal-quirk-inherit;
+            }
+
+    .w3-table-all {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    
+            }
+      .w3-table-all tr:nth-child(even) {
+       background-color: #f1f1f1;
+     }
+
+     .w3-bordered tr, .w3-table-all tr {
+      border-bottom: 1px solid #ddd;
+     }
+          
+    .w3-table-all td {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+}
+          
+    select {
+    -webkit-appearance: menulist;
+    box-sizing: border-box;
+    align-items: center;
+    white-space: pre;
+    -webkit-rtl-ordering: logical;
+    color: black;
+    background-color: white;
+    cursor: default;
+    border-width: 1px;
+    border-style: solid;
+    border-color: initial;
+    border-image: initial;
+}
+          </style>
+
+         <div class="clear"></div>                    
+<div id="click" class="call_button" onclick="getUserlist()"><a href="#">Load..</a></div>
+
+<form>
+<input name="users" type="text" placeholder="First name" onChange="showUserByName(this.value)" class="form_input required">
+</form>
+<br>
+<div id="userList"></div>
+
+<br>
+<form class="loginform">
+<select class="form_input" name="users" onChange="showUser(this.value)">
+  <option value="">Select a person:</option>
+  <option value="1">Greg</option>
+  <option value="2">Joe</option>
+  <option value="3">John</option>
+  <option value="4">Rob</option>
+  </select>
+</form>
+<br>
+<div style="padding:0px" id="txtHint"><b>User info will be listed here...</b></div>
+<div class="clear"></div> 
+          
+<div class="call_button"><a href="tel:+900 456 567 77">Reload!</a></div>    
+      
+      <div class="clear"></div>
+              <!--</div> end of page single-->  
+              
+              
+              
+              
+      
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
