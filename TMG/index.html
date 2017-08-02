@@ -255,7 +255,7 @@ function setHotlist(){
                   <li class="features-icon"><a href="pages/features.html" class="close-panel">Content</a></li>-->
                   <li class="photos-icon"><a href="pages/photos.html" class="close-panel">Cliff</a></li>
                   <li class="video-icon"><a href="pages/youtube.html" class="close-panel">YouTube</a></li>
-                  <li class="blog-icon"><a href="pages/blogX.html" class="close-panel">Latest Posts</a></li>
+                  <li class="blog-icon"><a href="pages/blog-tmg.html" class="close-panel" onClick="loadPosts()">Latest Posts</a></li>
                 <!--<li class="contact-icon"><a href="pages/contact.html" class="close-panel">Contact</a></li>
                   <li class="contact-icon"><a href="pages/iframe.html" class="close-panel">Frame</a></li>
                   <li class="contact-icon"><a href="pages/getdata.html" class="close-panel" onclick="delayGetData()">Get Data</a></li>
@@ -577,6 +577,21 @@ function setHotlist(){
 screenState = "notfull";}
    
 }
+    
+ // load post timeout
+function loadPosts(){
+	setTimeout(function(){ loadExt(); }, 500);
+	}
+	
+
+function loadExt(){
+ var script2 = document.createElement("script");script2.src = "js/get-posts-tmg.js";
+    script2.type = "text/javascript";
+    document.getElementsByTagName("body")[0].appendChild(script2);
+    //document.getElementById('loadMore').innerHTML = 'Loading..';
+	//alert('hh');
+  }
+    
 </script>
     
     <script>
