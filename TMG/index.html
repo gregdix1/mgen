@@ -32,6 +32,10 @@
 <link rel="stylesheet" href="css/circle-menu.min.css">       
 <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900" rel="stylesheet" type="text/css">
+        
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="media_scipts/mediaelementplayer.min.css">
+        
 <style  type="text/css">
 .list-nav2 {
     width: 94%;
@@ -108,6 +112,38 @@
     top: 130px;
     left: 30%;
 }
+    
+ 
+ #containerPlayer {
+            padding: 0 10px 25px;
+        }
+        .error {
+            color: red;
+        }
+        
+
+        #player2-container .mejs__time-buffering, #player2-container .mejs__time-current, #player2-container .mejs__time-handle,
+        #player2-container .mejs__time-loaded, #player2-container .mejs__time-marker, #player2-container .mejs__time-total {
+            height: 2px;
+        }
+
+        #player2-container .mejs__time-total {
+            margin-top: 9px;
+        }
+        #player2-container .mejs__time-handle {
+            left: -10px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            top: -5px;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            z-index: 1;
+            border: none;
+        }
+		
 
 </style>
    
@@ -365,7 +401,7 @@ function setHotlist(){
               <ul class="toolbar_icons icons_4row"><div style="width:10px"></div>
               <li><a href="#" data-popup=".popup-medialist" class="open-popup"><img src="images/left-arrows.png" alt="" title="" /></a></li>
               <li><a href="pages/photos.html"><img src="images/play.png" alt="" title="" /></a></li>
-              <li><a href="#" data-popup=".popup-playlist" class="open-popup"><img src="images/right-arrows.png" alt="" title="" /></a></li>
+              <li><a href="#" data-popup=".popup-player" class="open-popup"><img src="images/right-arrows.png" alt="" title="" /></a></li>
               <li><a href="pages/features.html" style=""><img src="images/mute.png" alt="" title="" /></a></li>
                   
               </ul>
@@ -399,7 +435,7 @@ function setHotlist(){
     </div>
     </div>
     
-    <!-- Services Popup -->
+    <!-- Social Popup -->
     <div class="popup popup-social">
     <div class="content-block">
       <h4>Social Share</h4>
@@ -415,6 +451,15 @@ function setHotlist(){
       <div class="close_popup_button"><a href="#" class="close-popup">Close</a></div>
     </div>
     </div>
+    
+    <!-- PLAYER Popup -->
+    <div class="popup popup-player">
+    
+      <iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/app-main/players.html?stretching=auto" frameborder="0" scroll="auto" allowfullscreen></iframe>
+      <div class="close_popup_button"><a href="#" class="close-popup" style="background-color: transparent;">Close</a></div>
+    </div>
+    
+    
     <!-- Posts Popup -->
     <div class="popup popup-cliffcentral">
     <div class="content-block" style="margin: 0px; padding: 0px; height: 100%;">
@@ -550,35 +595,35 @@ function setHotlist(){
 <script type="text/javascript" src="js/jquery.fitvids.js"></script>
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/getdata.js"></script>
+    
+<!-- media player -->
+    <script src="media_scipts/jquery.js"></script>
+
+    <script src="media_scipts/mediaelement-and-player.js"></script>
+    <script src="media_scipts/lang/cs.js"></script>
+    <script src="media_scipts/lang/de.js"></script>
+    <script src="media_scipts/lang/es.js"></script>
+    <script src="media_scipts/lang/fr.js"></script>
+    <script src="media_scipts/lang/hr.js"></script>
+    <script src="media_scipts/lang/hu.js"></script>
+    <script src="media_scipts/lang/it.js"></script>
+    <script src="media_scipts/lang/ja.js"></script>
+    <script src="media_scipts/lang/ko.js"></script>
+    <script src="media_scipts/lang/nl.js"></script>
+    <script src="media_scipts/lang/pl.js"></script>
+    <script src="media_scipts/lang/pt.js"></script>
+    <script src="media_scipts/lang/pt-br.js"></script>
+    <script src="media_scipts/lang/ro.js"></script>
+    <script src="media_scipts/lang/ru.js"></script>
+    <script src="media_scipts/lang/sk.js"></script>
+    <script src="media_scipts/lang/sv.js"></script>
+    <script src="media_scipts/lang/uk.js"></script>
+    <script src="media_scipts/lang/zh-cn.js"></script>
+    <script src="media_scipts/lang/zh.js"></script>
+    <script src="media_scipts/demo.js"></script>
 
 <script>
-//initialise vars
-   var screenState;
-   
-   
- function fullScreen() {
-    if(screenState != "full"){
-    screenState = "full";
-    // Find the right method, call on correct element
-    function launchIntoFullscreen(element) {
-        if (element.requestFullscreen) {
-            element.requestFullscreen();
-        } else if (element.mozRequestFullScreen) {
-            element.mozRequestFullScreen();
-        } else if (element.webkitRequestFullscreen) {
-            element.webkitRequestFullscreen();
-        } else if (element.msRequestFullscreen) {
-            element.msRequestFullscreen();
-        }
-    }
 
-    // Launch fullscreen for browsers that support it!
-    launchIntoFullscreen(document.documentElement);
-
-}else{//exitFullscreen();
-screenState = "notfull";}
-   
-}
     
  // load post timeout
 function loadPosts(){
