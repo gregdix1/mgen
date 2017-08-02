@@ -31,28 +31,28 @@
 <link rel="stylesheet" href="css/common.min.css">
 <link rel="stylesheet" href="css/circle-menu.min.css">       
 <link type="text/css" rel="stylesheet" href="css/swipebox.css" />
-<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900" rel="stylesheet" type="text/css">
 <style  type="text/css">
 .list-nav2 {
-    width: 100%;
-    padding: 40px 0px 0px;
+    width: 94%;
+    padding: 0px 0px 0px;
 }
 
 .list-nav2 ul li a {
  color: rgb(245, 242, 242);
     font-size: 8px;
     font-weight: 300;
-    width: 9%;
+   width: 68px;
     display: inline-block;
     float: left;
     height: auto;
     list-style: none;
     padding: 15px 20px 5px 20px;
-    margin: 15px;
+    margin: 5px;
     border-width: 1px;
     border-style: solid;
-    border-color: rgba(152, 148, 148, 0.3);
-    background-color: rgba(25, 24, 24, 0);
+    border-color: rgba(152, 148, 148, 0.5);
+    background-color: rgba(25, 24, 24, 0.7);
     border-image: initial;
     border-radius: 3px 3px 5px 5px;
     border-bottom: 8px solid #444343;
@@ -251,15 +251,15 @@ function setHotlist(){
               <nav class="list-nav">
                 <ul>
                   <li class="home-icon"><a href="index.html" class="close-panel">Home</a></li>
-                  <li class="about-icon"><a href="pages/about.html" class="close-panel">About</a></li>
-                  <li class="features-icon"><a href="pages/features.html" class="close-panel">Features</a></li>
-                  <li class="photos-icon"><a href="pages/photos.html" class="close-panel">Gallery</a></li>
-                  <li class="video-icon"><a href="pages/videos.html" class="close-panel">Videos</a></li>
-                  <li class="blog-icon"><a href="pages/blog.html" class="close-panel">Blog</a></li>
-                  <li class="contact-icon"><a href="pages/contact.html" class="close-panel">Contact</a></li>
+                 <!-- <li class="about-icon"><a href="pages/about.html" class="close-panel">Focus Page</a></li>
+                  <li class="features-icon"><a href="pages/features.html" class="close-panel">Content</a></li>-->
+                  <li class="photos-icon"><a href="pages/photos.html" class="close-panel">Cliff</a></li>
+                  <li class="video-icon"><a href="pages/youtube.html" class="close-panel">YouTube</a></li>
+                  <li class="blog-icon"><a href="pages/blogX.html" class="close-panel">Latest Posts</a></li>
+                <!--<li class="contact-icon"><a href="pages/contact.html" class="close-panel">Contact</a></li>
                   <li class="contact-icon"><a href="pages/iframe.html" class="close-panel">Frame</a></li>
                   <li class="contact-icon"><a href="pages/getdata.html" class="close-panel" onclick="delayGetData()">Get Data</a></li>
-                  <li class="contact-icon"><a href="pages/getdata-nohead.html" class="close-panel" >Get Ext Html</a></li>
+                  <li class="contact-icon"><a href="pages/getdata-nohead.html" class="close-panel" >Get Ext Html</a></li>-->
                 </ul>
               </nav>  
     </div>
@@ -313,8 +313,9 @@ function setHotlist(){
                           <div class="container" style="margin-bottom: 5px;">
                              <!-- Tagline and Social -->
                             <p class="leader-text">fasion  |  lifestyle  |  arts</p>
-                            <div class="social">
-                            <a href="#" class="demo-header-nav__link" onclick="soundCloudSetMain()"> <i class="fa fa-soundcloud soundcloud"></i></a> 
+                             <div style="height:30px"></div>
+                            <div class="social" style="font-size: 20px;">
+                            <a href="#" class="demo-header-nav__link" onclick="soundCloudSetMain()"> <i class="fa fa-soundcloud soundcloud" ></i></a> 
                               <!--   <a href="https://soundcloud.com/millennials-55148939" class="demo-header-nav__link" > <i class="fa fa-soundcloud soundcloud"></i></a> -->
                            <a href="https://www.instagram.com/" class="demo-header-nav__link"> <i class="fa fa-instagram instagram"></i></a>
                            <a href="#" class="demo-header-nav__link"> <i class="fa fa-facebook facebook"></i></a> 
@@ -324,27 +325,32 @@ function setHotlist(){
                           </div>
                          <!--  <a href="about.html" class="swiper_read_more">swipe to see more</a>-->                      </div>
                       <div class="swiper-slide">
-                      <nav class="list-nav2">
-                            <ul>
-                              <li class="aboutx-icon"><a href="pages/about.html" class=""><i class="fa fa-user" style="font-size: 22pt;"></i>About</a></li>
-                              <li class="responsive-icon"><a href="#" data-panel="left" class="open-panel"><i class="fa fa-image" style="font-size: 22pt;"></i>Sidebar</a></li>
-                              <li class="features-icon"><a href="pages/features.html" class=""><i class="fa fa-camera" style="font-size: 22pt;"></i>Features</a></li>
-                              <li class="photos-icon"><a href="pages/photos.html" class=""><i class="fa fa-youtube" style="font-size: 22pt;"></i>Gallery</a></li>
-                              <li class="video-icon"><a href="pages/videos.html"><i class="fa fa-soundcloud" style="font-size: 22pt;"></i>Videos</a></li>
-                              <li class="blog-icon"><a href="pages/blog.html"><i class="fa fa-twitter" style="font-size: 22pt;"></i>Blog</a></li>
-                              <li class="toogle-icon"><a href="pages/toogle.html"><i class="fa fa-upload" style="font-size: 22pt;"></i>Toogle</a></li>
-                              <li class="docs-icon"><a href="pages/tabs.html"><i class="fa fa-share" style="font-size: 22pt;"></i>Tabs</a></li>
-                              <li class="contact-icon"><a href="pages/contact.html"><i class="fa fa-user" style="font-size: 22pt;"></i>Contact</a></li>
-                            </ul>
-                          </nav>
+                          <div style="height:100px"></div>
+                       <span class="subtitle">[   data offline..   ]</span>
                          <!-- <span>WITH <br />BEAUTIFUL</span>
                           <span class="subtitle">multipurpose designs</span>
                           <a href="features.html" class="swiper_read_more">see all features</a>
-                          <iframe src="http://test.stickyginger.co.za/tmg-wp-app/filter/get-posts-liststyle.html" scrolling="auto" width="100%" height="98%" frameborder="0"></iframe>-->                      </div>
+                          <iframe src="http://test.stickyginger.co.za/tmg-wp-app/filter/get-posts-liststyle.html" scrolling="auto" width="100%" height="98%" frameborder="0"></iframe>-->                      
+                          
+                         </div>
                       <div class="swiper-slide">
-                          <span>READY <br /> FOR APPS</span>
-                          <span class="subtitle">web and native</span>
-                          <a href="#" class="swiper_read_more open-panel">start navigating</a>                      </div>
+                          <div style="height:40px"></div>
+                          <span class="subtitle">Log In</span>
+                         <div class="content-block">
+                           <div class="loginform">
+                          <form id="LoginForm" method="post">
+                           
+                            <input type="text" name="Username" value="" placeholder="username" class="form_input required" />
+                          <div style="height:15px"></div>
+                        <input type="password" name="Password"  placeholder="password" value="" class="form_input required" />
+                          <input type="submit" name="submit" class="form_submit" id="submit" value="Login" />
+                        </form>
+                          </div>
+                        </div>
+                          
+                          
+                          <div data-popup=".popup-reg" class="open_popup"><a href="#" class="open-popup">Register</a></div>
+                           </div>
                     </div>
                     <div class="swiper-pagination"></div>
                   </div>
@@ -354,11 +360,12 @@ function setHotlist(){
         <!-- Bottom Toolbar-->
         <div class="toolbar">
               <div class="toolbar-inner">
-              <ul class="toolbar_icons icons_4row">
-              <li><a href="#" data-popup=".popup-login" class="open-popup"><img src="images/icons/white/user.png" alt="" title="" /></a></li>
-              <li><a href="pages/features.html"><img src="images/icons/white/settings.png" alt="" title="" /></a></li>
+              <ul class="toolbar_icons icons_4row"><div style="width:10px"></div>
+              <li><a href="#" data-popup=".popup-medialist" class="open-popup"><img src="images/icons/white/user.png" alt="" title="" /></a></li>
               <li><a href="pages/photos.html"><img src="images/icons/white/photos.png" alt="" title="" /></a></li>
-              <li><a href="#" data-popup=".popup-social" class="open-popup"><img src="images/icons/white/heart.png" alt="" title="" /></a></li>
+              <li><a href="#" data-popup=".popup-playlist" class="open-popup"><img src="images/icons/white/heart.png" alt="" title="" /></a></li>
+              <li><a href="pages/features.html" style="display:none;"><img src="images/icons/white/settings.png" alt="" title="" /></a></li>
+                  
               </ul>
               </div>  
         </div>
@@ -367,22 +374,29 @@ function setHotlist(){
       </div>
     </div>
     
-    <!-- About Popup -->
-    <div class="popup popup-login">
+    <!-- Register Popup -->
+    <div class="popup popup-reg">
     <div class="content-block">
-      <h4>Login</h4>
+      <h3>Register</h3>
             <div class="loginform">
-            <form id="LoginForm" method="post">
+            <form id="RegisterForm" method="post">
             <label>Username:</label>
             <input type="text" name="Username" value="" class="form_input required" />
+            <label>Email:</label>
+            <input type="email" name="email" value="" class="form_input required" />
+            <label>Contact:</label>
+            <input type="text" name="tel" value="" placeholder="+27" class="form_input required" />
             <label>Password:</label>
             <input type="password" name="Password" value="" class="form_input required" />
-            <input type="submit" name="submit" class="form_submit" id="submit" value="Login" />
+            <label>Password Confirm:</label>
+            <input type="password" name="Password" value="" class="form_input required" />
+            <input type="submit" name="submit" class="form_submit" id="signup" value="Signup" />
             </form>
             </div>
-      <div class="close_popup_button_gray"><a href="#" class="close-popup">Close</a></div>
+      <div class="close_popup_button_gray"><a href="#" class="close-popup">Cancel</a></div>
     </div>
     </div>
+    
     <!-- Services Popup -->
     <div class="popup popup-social">
     <div class="content-block">
@@ -407,6 +421,124 @@ function setHotlist(){
       <div class="close_popup_button"><a href="#" class="close-popup">Close</a></div>
     </div>
     </div>
+    
+    <!-- PLAYLIST Popup -->
+    <div class="popup popup-playlist" style="display: block;background: none; background-color: rgba(0, 0, 0, 0.7);">
+    <div class="content-block" style="margin: 0px; padding: 0px; height: 100%;">
+      
+      <iframe src="http://test.stickyginger.co.za/tmg-wp-app/playlist/tmg-list-mobile2.html" scrolling="auto" width="100%" height="65%" frameborder="0"></iframe>
+      <nav class="list-nav2">
+         <ul>
+                 <li class="aboutx-icon"><a href="pages/aboutx.html" class=""><i class="fa fa-user" style="font-size: 22pt;"></i></a></li>
+                  <li class="responsive-icon"><a href="#" data-panel="left" class="open-panel"><i class="fa fa-image" style="font-size: 22pt;"></i></a></li>
+                  <li class="features-icon"><a href="pages/featuresx.html" class=""><i class="fa fa-camera" style="font-size: 22pt;"></i></a></li>
+                  <li class="photos-icon"><a href="pages/photosx.html" class=""><i class="fa fa-youtube" style="font-size: 22pt;"></i></a></li>
+                 <li class="video-icon"><a href="pages/videosx.html"><i class="fa fa-soundcloud" style="font-size: 22pt;"></i></a></li>
+                 <li class="blog-icon"><a href="pages/blogx.html"><i class="fa fa-twitter" style="font-size: 22pt;"></i></a></li>
+                <li class="toogle-icon"><a href="pages/tooglex.html"><i class="fa fa-upload" style="font-size: 22pt;"></i></a></li>
+               <li class="docs-icon"><a href="pages/tabsx.html"><i class="fa fa-share" style="font-size: 22pt;"></i></a></li>
+               <!--<li class="contact-icon"><a href="pages/contactx.html"><i class="fa fa-user" style="font-size: 22pt;"></i></a></li>-->
+                </ul>
+       </nav>
+        
+        <div class="close_popup_button"><a href="#" style="background:transparent; padding:0px" class="close-popup"> . . . </a></div>
+    </div>
+    </div>
+    
+     <!-- Playlist media list Popup -->
+   <div id="playLst" class="popup popup-medialist" style="background-color: rgb(22, 22, 22); border-top: 0px solid #ccc;">
+    
+    
+     <div class="content-block" style="margin-top: 0px;">
+    
+          <!--https://w.soundcloud.com/player/?visual=true&url=https%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F3361135&show_artwork=true&maxwidth=1140&maxheight=1000
+     <iframe id="playsource" src="https://widget.spreaker.com/player?episode_id=11613473&theme=dark&autoplay=false&playlist=false" style=" margin-top: 35px; background-image: url(images/tech-load.gif);background-repeat: no-repeat;  background-position: center; background-size: contain;" width="100%" height="auto" frameborder="0"></iframe>-->
+     
+     
+      <!-- tabs 1 -->
+     
+      <div class="buttons-row" style="margin-top: 15px;">
+                    <a href="#tab1" class="tab-link active button"><img src="img/playlistBtn.png" alt="" width="25px" height="25px" style="padding-top: 5px;"></a>
+                    <a href="#tab2" class="tab-link button"><img src="img/mix2.png" alt="" width="30px" height="30px" style="padding-top: 5px;"></a>
+                    <a href="#tab3" class="tab-link button"><img src="img/radioBtn.png" alt="" width="25px" height="25px" style="padding-top: 5px;"></a>
+                    
+              </div>
+              
+              <div class="tabs-animated-wrap">
+                    <div class="tabs">
+                          <div id="tab1" class="tab active">
+                               <!-- <h4>Queue</h4>-->
+                               <div><input type="text" name="add" placeholder="Add to playlist..." value="" class="form_input required" style="padding: 3%; width: 93%; margin: 0 0 5px 0; border: 1px solid #6d6d6d; background-color: #161616; border-radius: 4px; color:#ccc;" /></div>
+
+                                 <iframe src="" width="100%" height="auto" frameborder="0"></iframe><!--https://widget.spreaker.com/player?episode_id=11613473&theme=dark&autoplay=false&playlist=false -->
+                          </div>
+    
+                          <div id="tab2" class="tab">
+                                <!-- <h4>Toundcloud</h4>-->
+                               <iframe src="" width="100%" height="auto" frameborder="0"></iframe> <!-- https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/294095843&amp;color=000000&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false -->
+                          </div> 
+                          
+                           <div id="tab3" class="tab">
+                               <!-- <h4>radio</h4>-->
+                               <iframe src="" width="100%" height="auto" frameborder="0"></iframe><!-- https://embed.iono.fm/stream/179?theme=cliffcentral&autoplay=1&autoplay=0 -->
+                          </div> 
+                          
+                          
+                          
+                    </div>
+              </div>
+          
+         
+     
+     <!-- tabs 1 end -->
+     
+     
+     <!-- tabs 2 -->
+     
+      <div class="buttons-row" style="margin-top: 15px;">
+                    <a href="#tab4" class="tab-link active button"><img src="images/hot-wh.svg" alt="" width="25px" height="25px" style="padding-top: 5px;"></a>
+                    <a href="#tab5" class="tab-link button"><img src="img/Icon-star.png" alt="" width="25px" height="25px" style="padding-top: 5px;"></a>
+                    <a href="#tab6" class="tab-link button"><img src="images/search2-wh.svg" alt="" width="25px" height="25px" style="padding-top: 5px;"></a>
+              </div>
+              
+              <div class="tabs-animated-wrap">
+                    <div class="tabs">
+                          <div id="tab4" class="tab active">
+                               <!-- <h4>Lates 4t</h4>-->
+                                 <iframe src="http://themillennialgen.com/app/api/get-posts-api.html" width="100%" height="280px" frameborder="0"></iframe>
+                          </div>
+
+    
+                          <div id="tab5" class="tab">
+                                <!-- <h4>Tab 5 content</h4>-->
+                                
+                                <p>
+                                No bookmarks.
+                                </p>
+                          </div> 
+                          
+                           <div id="tab6" class="tab">
+                               <!-- <h4>Tab six content</h4>-->
+                               <div><input type="text" name="search" placeholder="Search..." value="" class="form_input required" style="padding: 3%; width: 93%; margin: 0 0 5px 0; border: 1px solid #6d6d6d; background-color: #161616; border-radius: 4px; color:#ccc;" /></div>
+                                <p>
+                                No recent searches...
+                                </p>
+                          </div> 
+                          
+                    </div>
+              </div>
+          
+          
+     
+     <!-- tabs 2 end -->
+     
+     
+      <div class="close_popup_button_gray" ><a href="#" class="close-popup" style="width: 10%; bottom: 0px; border-radius: 0px; font-size: 12pt; background-color: transparent; right: 10px;">X</a></div>
+    </div>
+    </div>
+    
+   
+   <!--End of Playlist pop-->
     
 <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 <script src="js/jquery.validate.min.js" type="text/javascript"></script>

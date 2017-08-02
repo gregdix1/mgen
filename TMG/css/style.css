@@ -136,8 +136,8 @@ font-size:20px;
 -webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;
 }
 .button {
-border: 1px solid #0c928d;
-color: #0c928d;
+border: 1px solid #3c3c3c;
+color: #3c3c3c;
 text-decoration: none;
 text-align: center;
 display: block;
@@ -163,7 +163,7 @@ font-family: inherit;
 cursor: pointer;
 }
 .button.active {
-background: #0c928d;
+background: #3c3c3c;
 color: #fff;
 }
 /*===============================================*/
