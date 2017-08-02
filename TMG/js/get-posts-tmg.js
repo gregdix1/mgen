@@ -53,6 +53,19 @@ jQuery(document).ready(function($) {
     script.src = "js/jquery.min.js";
     script.type = "text/javascript";
     //document.getElementsByTagName("body")[0].appendChild(script);
+      };
 	
-	
-}
+/// filter cat reload posts
+
+function loadCatFilter(id) {
+    var catID = id
+    document.getElementById('loadMore').innerHTML = 'Loading ' + catID;
+    $( "#postList" ).hide();
+    setTimeout(function(){ unhidePosts(); }, 2000);
+  }
+
+function unhidePosts() {
+    document.getElementById('loadMore').innerHTML = 'Load more posts';
+    $( "#postList" ).show();
+  }
+      
