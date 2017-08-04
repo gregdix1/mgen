@@ -36,6 +36,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="media_scipts/mediaelementplayer.min.css">
         
+<!-- file save -->
+<link href="css/filesave/theme.css" rel="stylesheet" type="text/css" />
+	<link href="css/filesave/main.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" charset="utf-8" src="scripts/fileHelper.js"></script>
+	<script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
+        
 <style  type="text/css">
 .list-nav2 {
     width: 94%;
@@ -292,6 +298,7 @@ function setHotlist(){
                   <li class="photos-icon"><a href="pages/photos.html" class="close-panel">Cliff</a></li>
                   <li class="video-icon"><a href="pages/youtube.html" class="close-panel">YouTube</a></li>
                   <li class="blog-icon"><a href="pages/blog-tmg.html" class="close-panel" onClick="loadPosts()">Latest Posts</a></li>
+                  <li class="feature-icon"><a href="#" data-popup=".popup-file" class="open-popup">Local File</a></li>
                 <!--<li class="contact-icon"><a href="pages/contact.html" class="close-panel">Contact</a></li>
                   <li class="contact-icon"><a href="pages/iframe.html" class="close-panel">Frame</a></li>
                   <li class="contact-icon"><a href="pages/getdata.html" class="close-panel" onclick="delayGetData()">Get Data</a></li>
@@ -340,7 +347,7 @@ function setHotlist(){
                     
                       <div class="swiper-slide"><div id="portal" class="portal">HELLO!</div>
                       <div style="height:40px"></div>
-                      <div id="iconM" class="spinnerBlue"><a href="#" data-popup=".popup-playlist" class="open-popup">
+                      <div id="iconM" class="spinnerBlue"><a href="#" data-popup=".popup-player" class="open-popup">
                       <img src="images/icon-big-tmg.png" style=" width: 195px; height: auto;"></a>
 </div>
                       
@@ -363,7 +370,8 @@ function setHotlist(){
                       <div class="swiper-slide">
                           <!--<div style="height:100px"></div>
                        <span class="subtitle">[   data offline..   ]</span>-->
-                          <iframe src="http://test.stickyginger.co.za/tmg-wp-app/filter/get-posts-filteri-title.html" scrolling="auto" width="93%" height="85%" frameborder="0" style="padding: 8px"></iframe>
+                          <!--<iframe src="http://test.stickyginger.co.za/tmg-wp-app/filter/get-posts-filteri-title.html" scrolling="auto" width="93%" height="85%" frameborder="0" style="padding: 8px"></iframe>-->
+                           <iframe src="http://test.stickyginger.co.za/tmg-wp-app/home-special-dark/" scrolling="auto" width="93%" height="85%" frameborder="0" style="padding: 8px"></iframe>
                           
                          <!-- <span>WITH <br />BEAUTIFUL</span>
                           <span class="subtitle">multipurpose designs</span>
@@ -396,13 +404,13 @@ function setHotlist(){
           </div>
         </div>
         <!-- Bottom Toolbar-->
-        <div class="toolbar" style="background-color: rgba(0, 0, 0, 0.5); height: 40px">
-              <div class="toolbar-inner">
+        <div class="toolbar" style="background-color: rgba(0, 0, 0, 0.0); height: 60px; background-image: url(http://test.stickyginger.co.za/app-main/images/playbarX.png); background-repeat: no-repeat; background-size: contain; background-position: bottom;">
+              <div class="toolbar-inner" style="opacity:0.9">
               <ul class="toolbar_icons icons_4row"><div style="width:10px"></div>
-              <li><a href="#" data-popup=".popup-medialist" class="open-popup"><img src="images/left-arrows.png" alt="" title="" /></a></li>
-              <li><a href="pages/photos.html"><img src="images/play.png" alt="" title="" /></a></li>
-              <li><a href="#" data-popup=".popup-player" class="open-popup"><img src="images/right-arrows.png" alt="" title="" /></a></li>
-              <li><a href="pages/features.html" style=""><img src="images/mute.png" alt="" title="" /></a></li>
+              <li><a href="#" data-popup=".popup-medialist" class="open-popup"><img style="opacity:0.4" src="images/icons/white/user.png" alt="" title="" /></a></li>
+              <li><a href="pages/photos.html"><img style="padding:6px; opacity:0.4" src="images/radioBtn.png" alt="" title="" /></a></li>
+              <li><a href="#" data-popup=".popup-player" class="open-popup"><img style="opacity:0.4" src="images/icons/white/heart.png" alt="" title="" /></a></li>
+              <li><a href="pages/features.html" style=""><img style="opacity:0.0"src="images/icons/white/newspaper.png" alt="" title="" /></a></li>
                   
               </ul>
               </div>  
@@ -452,11 +460,72 @@ function setHotlist(){
     </div>
     </div>
     
-    <!-- PLAYER Popup -->
-    <div class="popup popup-player">
+    <!-- File save Popup -->
+    <div class="popup popup-file">
+    <div class="content-block">
+      <h4>File Save Local</h4>
+      <!-- code -->
+        <div class="subheader">
+		<div class="row">
+			<div class="col">
+                <input class="input" id="fileNameInput" placeholder="File Name" />
+			</div>
+		</div>
+        <div class="row">
+            <div class="col">
+                <input class="input" id="textInput" placeholder="Text Content" />
+            </div>
+        </div>
+		<div class="row">
+			<div class="col">
+				<button class="button" id="writeFileButton">Write</button>
+			</div>
+			<div class="col">
+				<button class="button" id="readFileButton">Read</button>
+			</div>
+			<div class="col">
+				<button class="button -negative" id="deleteFileButton">Delete</button>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="row" id="results">
+			<div class="col u-text-center u-color-accent">
+				<span id="result"></span>
+			</div>
+		</div>
+		<div id="error" class="hidden">
+			<div class="row">
+				<div class="col u-text-right u-text-bold">
+					<span>Error code:</span>
+				</div>
+				<div class="col">
+					<div class="u-color-accent u-text-left" id="errCode"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col u-text-right u-text-bold">
+					<span>Message:</span>
+				</div>
+				<div class="col">
+					<div class="u-color-accent" id="errMessage"></div>
+				</div>
+			</div>
+		</div>
+        <input type="file" name="fselectfile" id="fselectfile" />
+	</div>
+      <!-- code end -->
+      <div class="close_popup_button"><a href="#" class="close-popup">Close</a></div>
+    </div>
+    </div>
     
-      <iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/app-main/players.html?stretching=auto" frameborder="0" scroll="auto" allowfullscreen></iframe>
-      <div class="close_popup_button"><a href="#" class="close-popup" style="background-color: transparent;">Close</a></div>
+    <!-- PLAYER Popup -->
+    <div class="popup popup-player" style="background:block; height: 60%; top:40%;">
+    
+      <!--<iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/app-main/players.html?stretching=auto" frameborder="0" scroll="auto" allowfullscreen></iframe>-->
+         <!--<iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/tmg-wp-app/home-special-dark/" frameborder="0" scroll="auto" allowfullscreen></iframe>-->
+        <iframe src="http://test.stickyginger.co.za/app-main/players2.html" width="100%" height="100%" frameborder="0" scroll="auto" style="background-color: transparent;" allowfullscreen ></iframe>
+      <div class="close_popup_button"><a href="#" class="close-popup" style="background-color: transparent;width:40%; margin-left: 100px; margin-bottom:-20px;">...</a></div>
     </div>
     
     
@@ -596,7 +665,7 @@ function setHotlist(){
 <script type="text/javascript" src="js/email.js"></script>
 <script type="text/javascript" src="js/getdata.js"></script>
     
-<!-- media player -->
+<!-- media player 
     <script src="media_scipts/jquery.js"></script>
 
     <script src="media_scipts/mediaelement-and-player.js"></script>
@@ -620,7 +689,7 @@ function setHotlist(){
     <script src="media_scipts/lang/uk.js"></script>
     <script src="media_scipts/lang/zh-cn.js"></script>
     <script src="media_scipts/lang/zh.js"></script>
-    <script src="media_scipts/demo.js"></script>
+    <script src="media_scipts/demo.js"></script>-->
 
 <script>
 
