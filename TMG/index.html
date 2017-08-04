@@ -44,28 +44,29 @@
         
 <style  type="text/css">
 .list-nav2 {
-    width: 94%;
+    width: 100%;
     padding: 0px 0px 0px;
 }
 
 .list-nav2 ul li a {
- color: rgb(245, 242, 242);
-    font-size: 8px;
+ 
+     color: rgb(245, 242, 242);
+    font-size: 6px;
     font-weight: 300;
-   width: 68px;
+    width: 60px;
     display: inline-block;
     float: left;
     height: auto;
     list-style: none;
-    padding: 15px 20px 5px 20px;
-    margin: 5px;
-    border-width: 1px;
+    padding: 0px;
+    margin: 8px;
+    border-width: 0px;
     border-style: solid;
     border-color: rgba(152, 148, 148, 0.5);
-    background-color: rgba(25, 24, 24, 0.7);
+    background-color: rgba(25, 24, 24, 0.31);
     border-image: initial;
     border-radius: 3px 3px 5px 5px;
-    border-bottom: 8px solid #444343;
+    border-bottom: 0px solid rgba(68, 67, 67, 0.23);
 }
 .list-nav2 ul {
     width: 100%;
@@ -74,7 +75,7 @@
     text-align: center;
     list-style: none;
     padding: 0px;
-    margin: 6%;
+    margin: 1%;
 }
 .about-icon a {
     background: url(images/icons/white/user.png) 50% 35px / auto 40% no-repeat;
@@ -447,7 +448,7 @@ function setHotlist(){
     <div class="popup popup-social">
     <div class="content-block">
       <h4>Social Share</h4>
-      <p>Share icons solution that allows you share and increase your social popularity.</p>
+      <p>Share and increase your social circles.</p>
       <ul class="social_share">
       <li><a href="#"><img src="images/icons/white/twitter.png" alt="" title="" /></a></li>
       <li><a href="#"><img src="images/icons/white/facebook.png" alt="" title="" /></a></li>
@@ -524,7 +525,10 @@ function setHotlist(){
     
       <!--<iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/app-main/players.html?stretching=auto" frameborder="0" scroll="auto" allowfullscreen></iframe>-->
          <!--<iframe width="100%" height="100%" style=" margin-top: 0px;" src="http://test.stickyginger.co.za/tmg-wp-app/home-special-dark/" frameborder="0" scroll="auto" allowfullscreen></iframe>-->
+        
         <iframe src="http://test.stickyginger.co.za/app-main/players2.html" width="100%" height="100%" frameborder="0" scroll="auto" style="background-color: transparent;" allowfullscreen ></iframe>
+        
+        <div><input type="text" name="add2" placeholder="Add to playlist..." value="" class="form_input required" style="padding: 3%; width: 93%; margin: 0 0 5px 0; border: 1px solid #6d6d6d; background-color: #161616; border-radius: 4px; color:#ccc;" /></div>
       <div class="close_popup_button"><a href="#" class="close-popup" style="background-color: transparent;width:40%; margin-left: 100px; margin-bottom:-20px;">...</a></div>
     </div>
     
@@ -584,9 +588,24 @@ function setHotlist(){
                     <div class="tabs">
                           <div id="tab1" class="tab active">
                                <!-- <h4>Queue</h4>-->
-                               <div><input type="text" name="add" placeholder="Add to playlist..." value="" class="form_input required" style="padding: 3%; width: 93%; margin: 0 0 5px 0; border: 1px solid #6d6d6d; background-color: #161616; border-radius: 4px; color:#ccc;" /></div>
+                               <!--<div><input type="text" name="add" placeholder="Add to playlist..." value="" class="form_input required" style="padding: 3%; width: 93%; margin: 0 0 5px 0; border: 1px solid #6d6d6d; background-color: #161616; border-radius: 4px; color:#ccc;" /></div>-->
+                              
+                              <nav class="list-nav2">
+         <ul>
+                 <li class="aboutx-icon"><a href="pages/aboutx.html" class=""><i class="fa fa-user" style="font-size: 22pt;"></i></a></li>
+                  <li class="responsive-icon"><a href="#" data-panel="left" class="open-panel"><i class="fa fa-image" style="font-size: 22pt;"></i></a></li>
+                  <li class="features-icon"><a href="pages/featuresx.html" class=""><i class="fa fa-camera" style="font-size: 22pt;"></i></a></li>
+                  <li class="photos-icon"><a href="pages/photosx.html" class=""><i class="fa fa-youtube" style="font-size: 22pt;"></i></a></li>
+                 <li class="video-icon"><a href="pages/videosx.html"><i class="fa fa-soundcloud" style="font-size: 22pt;"></i></a></li>
+                 <li class="blog-icon"><a href="pages/blogx.html"><i class="fa fa-twitter" style="font-size: 22pt;"></i></a></li>
+                <li class="toogle-icon"><a href="pages/tooglex.html"><i class="fa fa-upload" style="font-size: 22pt;"></i></a></li>
+               <li class="docs-icon"><a href="pages/tabsx.html"><i class="fa fa-share" style="font-size: 22pt;"></i></a></li>
+               <!--<li class="contact-icon"><a href="pages/contactx.html"><i class="fa fa-user" style="font-size: 22pt;"></i></a></li>-->
+                </ul>
+       </nav>
+                              
 
-                                 <iframe src="" width="100%" height="auto" frameborder="0"></iframe><!--https://widget.spreaker.com/player?episode_id=11613473&theme=dark&autoplay=false&playlist=false -->
+                                 <!--<iframe src="" width="100%" height="auto" frameborder="0"></iframe>https://widget.spreaker.com/player?episode_id=11613473&theme=dark&autoplay=false&playlist=false -->
                           </div>
     
                           <div id="tab2" class="tab">
@@ -627,10 +646,10 @@ function setHotlist(){
     
                           <div id="tab5" class="tab">
                                 <!-- <h4>Tab 5 content</h4>-->
-                                
-                                <p>
+                                <iframe src="http://test.stickyginger.co.za/app-main/players2.html" width="100%" height="100%" frameborder="0" scroll="auto" style="background-color: transparent;" allowfullscreen ></iframe>
+                               <!-- <p>
                                 No bookmarks.
-                                </p>
+                                </p>-->
                           </div> 
                           
                            <div id="tab6" class="tab">
